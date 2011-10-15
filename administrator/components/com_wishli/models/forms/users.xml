@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+
+              <field name="id" type="text" default="0" label="JGLOBAL_FIELD_ID_LABEL"
+                    readonly="true" class="readonly"
+                    description="JGLOBAL_FIELD_ID_DESC" /> 
+
+       <field name="name" type="text" size="40" class="inputbox"
+                 label="COM_WISHLI_FORM_LBL_USERS_NAME" description="COM_WISHLI_FORM_DESC_USERS_NAME" 
+                
+                 required="true" 
+                filter="safehtml" /> 
+
+       <field name="email" type="text" size="40" class="inputbox"
+                 label="COM_WISHLI_FORM_LBL_USERS_EMAIL" description="COM_WISHLI_FORM_DESC_USERS_EMAIL" 
+                
+                 required="true" 
+                filter="safehtml" /> 
+
+       <field name="j_user_id" type="text" size="40" class="inputbox"
+                 label="COM_WISHLI_FORM_LBL_USERS_J_USER_ID" description="COM_WISHLI_FORM_DESC_USERS_J_USER_ID" 
+                
+                
+                filter="safehtml" /> 
+
+       <field name="fb_user_id" type="text" size="40" class="inputbox"
+                 label="COM_WISHLI_FORM_LBL_USERS_FB_USER_ID" description="COM_WISHLI_FORM_DESC_USERS_FB_USER_ID" 
+                
+                
+                filter="safehtml" /> 
+
+       <field name="avatar" type="text" size="40" class="inputbox"
+                 label="COM_WISHLI_FORM_LBL_USERS_AVATAR" description="COM_WISHLI_FORM_DESC_USERS_AVATAR" 
+                
+                
+                filter="safehtml" /> 
+
+         <field
+                name="state"
+                type="list"
+                label="JSTATUS"
+                description="JFIELD_PUBLISHED_DESC"
+                class="inputbox"
+                size="1"
+                default="1">
+                <option value="1">JPUBLISHED</option>
+                <option value="0">JUNPUBLISHED</option>
+            </field> 
+
+                        <field name="checked_out" type="hidden" filter="unset" />
+                <field name="checked_out_time" type="hidden" filter="unset" />
+
+	</fieldset>
+
+</form>

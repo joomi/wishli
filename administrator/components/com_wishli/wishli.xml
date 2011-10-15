@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="1.6.0" method="upgrade">
+	<name>wishli</name>
+	<creationDate>2011-10-08</creationDate>
+	<copyright>Copyright (C) 2011. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <author>Shay zalman</author>
+	<authorEmail>info@jjextensions.com</authorEmail>
+	<authorUrl>http://www.jjextensions.com</authorUrl>
+	<version>1.0.0</version>
+	<description>wish list component</description>
+
+	<install> <!-- Runs on install -->
+    	<sql>
+        	<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+  		</sql>
+    </install>
+    <uninstall> <!-- Runs on uninstall -->
+    	<sql>
+        	<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+  		</sql>
+   </uninstall>
+
+	<files folder="site">
+		<filename>index.html</filename>
+		<filename>wishli.php</filename>
+		<filename>controller.php</filename>
+		<filename>router.php</filename>
+		<folder>views</folder>
+		<folder>models</folder>
+		<folder>controllers</folder>
+		<folder>helpers</folder>
+	</files>
+	<languages folder="site">
+		<language tag="en-GB">language/en-GB.com_wishli.ini
+		</language>
+	</languages>
+	<administration>
+		<menu>COM_WISHLI</menu>
+		<submenu>
+			<menu link="option=com_wishli&amp;view=userss" view="userss" img="class:userss" alt="Wishli/Userss">COM_WISHLI_USERSS</menu>
+			<menu link="option=com_wishli&amp;view=lists" view="lists" img="class:lists" alt="Wishli/Lists">COM_WISHLI_LISTS</menu>
+			<menu link="option=com_wishli&amp;view=categorys" view="categorys" img="class:categorys" alt="Wishli/Categorys">COM_WISHLI_CATEGORYS</menu>
+			<menu link="option=com_wishli&amp;view=gifts" view="gifts" img="class:gifts" alt="Wishli/Gifts">COM_WISHLI_GIFTS</menu>
+			<menu link="option=com_wishli&amp;view=buyers" view="buyers" img="class:buyers" alt="Wishli/Buyers">COM_WISHLI_BUYERS</menu>
+
+        </submenu>
+		<files folder="administrator">
+			<filename>access.xml</filename>
+			<filename>config.xml</filename>
+			<filename>controller.php</filename>
+			<filename>index.html</filename>
+			<filename>wishli.php</filename>
+			<folder>controllers</folder>
+			<folder>helpers</folder>
+			<folder>models</folder>
+			<folder>sql</folder>
+			<folder>tables</folder>
+			<folder>views</folder>
+		</files>
+		<languages folder="administrator">
+			<language tag="en-GB">language/en-GB.com_wishli.ini
+			</language>
+			<language tag="en-GB">language/en-GB.com_wishli.sys.ini
+			</language>
+		</languages>
+	</administration>
+</extension>
+

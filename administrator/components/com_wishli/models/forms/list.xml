@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+
+              <field name="id" type="text" default="0" label="JGLOBAL_FIELD_ID_LABEL"
+                    readonly="true" class="readonly"
+                    description="JGLOBAL_FIELD_ID_DESC" /> 
+
+       <field name="categories" type="text" size="40" class="inputbox"
+                 label="COM_WISHLI_FORM_LBL_LIST_CATEGORIES" description="COM_WISHLI_FORM_DESC_LIST_CATEGORIES" 
+                
+                
+                filter="safehtml" /> 
+
+       <field name="userid" type="text" size="40" class="inputbox"
+                 label="COM_WISHLI_FORM_LBL_LIST_USERID" description="COM_WISHLI_FORM_DESC_LIST_USERID" 
+                
+                
+                filter="safehtml" /> 
+
+       <field name="desc" type="editor" buttons="true"
+                class="inputbox"
+                filter="safehtml"
+                
+                
+                 label="COM_WISHLI_FORM_LBL_LIST_DESC" description="COM_WISHLI_FORM_DESC_LIST_DESC"  /> 
+
+       <field name="event_date" type="calendar" class="inputbox"
+                
+                
+                 label="COM_WISHLI_FORM_LBL_LIST_EVENT_DATE" description="COM_WISHLI_FORM_DESC_LIST_EVENT_DATE" 
+                filter="safehtml" /> 
+
+       <field name="location" type="text" size="40" class="inputbox"
+                 label="COM_WISHLI_FORM_LBL_LIST_LOCATION" description="COM_WISHLI_FORM_DESC_LIST_LOCATION" 
+                
+                
+                filter="safehtml" /> 
+
+       <field name="title" type="text" size="40" class="inputbox"
+                 label="COM_WISHLI_FORM_LBL_LIST_TITLE" description="COM_WISHLI_FORM_DESC_LIST_TITLE" 
+                
+                
+                filter="safehtml" /> 
+
+       <field name="theme" type="text" size="40" class="inputbox"
+                 label="COM_WISHLI_FORM_LBL_LIST_THEME" description="COM_WISHLI_FORM_DESC_LIST_THEME" 
+                
+                
+                filter="safehtml" /> 
+
+         <field
+                name="state"
+                type="list"
+                label="JSTATUS"
+                description="JFIELD_PUBLISHED_DESC"
+                class="inputbox"
+                size="1"
+                default="1">
+                <option value="1">JPUBLISHED</option>
+                <option value="0">JUNPUBLISHED</option>
+            </field> 
+
+                        <field name="checked_out" type="hidden" filter="unset" />
+                <field name="checked_out_time" type="hidden" filter="unset" />
+
+	</fieldset>
+
+</form>

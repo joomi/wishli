@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+
+       <field name="categories" type="text" size="40" class="inputbox" label="categories" description="COM_WISHLI_FORM_DESC_LIST_CATEGORIES" /> 
+
+       <field name="userid" type="text" size="40" class="inputbox" label="userid" description="COM_WISHLI_FORM_DESC_LIST_USERID"  /> 
+
+       <field name="desc" type="textarea" buttons="true"
+                class="inputbox"
+                 label="desc" description="COM_WISHLI_FORM_DESC_LIST_DESC"  /> 
+
+       <field name="event_date" type="calendar" class="inputbox"
+                 label="date" description="COM_WISHLI_FORM_DESC_LIST_EVENT_DATE" 
+                 /> 
+
+       <field name="location" type="text" size="40" class="inputbox"
+                 label="location" description="COM_WISHLI_FORM_DESC_LIST_LOCATION"                  /> 
+
+       <field name="title" type="text" size="40" class="inputbox"
+                 label="title" description="COM_WISHLI_FORM_DESC_LIST_TITLE" /> 
+
+       <field name="theme" type="text" size="40" class="inputbox"
+                 label="theme" description="COM_WISHLI_FORM_DESC_LIST_THEME" /> 
+
+
+	</fieldset>
+
+</form>

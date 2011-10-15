@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+
+              <field name="id" type="text" default="0" label="JGLOBAL_FIELD_ID_LABEL"
+                    readonly="true" class="readonly"
+                    description="JGLOBAL_FIELD_ID_DESC" /> 
+
+       <field name="user_id" type="text" size="40" class="inputbox"
+                 label="COM_WISHLI_FORM_LBL_BUYER_USER_ID" description="COM_WISHLI_FORM_DESC_BUYER_USER_ID" 
+                
+                
+                filter="safehtml" /> 
+
+       <field name="gift_id" type="text" size="40" class="inputbox"
+                 label="COM_WISHLI_FORM_LBL_BUYER_GIFT_ID" description="COM_WISHLI_FORM_DESC_BUYER_GIFT_ID" 
+                
+                
+                filter="safehtml" /> 
+
+       <field name="buyer_name" type="text" size="40" class="inputbox"
+                 label="COM_WISHLI_FORM_LBL_BUYER_BUYER_NAME" description="COM_WISHLI_FORM_DESC_BUYER_BUYER_NAME" 
+                
+                 required="true" 
+                filter="safehtml" /> 
+
+       <field name="email" type="text" size="40" class="inputbox"
+                 label="COM_WISHLI_FORM_LBL_BUYER_EMAIL" description="COM_WISHLI_FORM_DESC_BUYER_EMAIL" 
+                
+                 required="true" 
+                filter="safehtml" /> 
+
+       <field name="attending" type="text" size="40" class="inputbox"
+                 label="COM_WISHLI_FORM_LBL_BUYER_ATTENDING" description="COM_WISHLI_FORM_DESC_BUYER_ATTENDING" 
+                
+                
+                filter="safehtml" /> 
+
+       <field name="percentage" type="text" size="40" class="inputbox"
+                 label="COM_WISHLI_FORM_LBL_BUYER_PERCENTAGE" description="COM_WISHLI_FORM_DESC_BUYER_PERCENTAGE" 
+                
+                
+                filter="safehtml" /> 
+
+       <field name="message" type="editor" buttons="true"
+                class="inputbox"
+                filter="safehtml"
+                
+                
+                 label="COM_WISHLI_FORM_LBL_BUYER_MESSAGE" description="COM_WISHLI_FORM_DESC_BUYER_MESSAGE"  /> 
+
+         <field
+                name="state"
+                type="list"
+                label="JSTATUS"
+                description="JFIELD_PUBLISHED_DESC"
+                class="inputbox"
+                size="1"
+                default="1">
+                <option value="1">JPUBLISHED</option>
+                <option value="0">JUNPUBLISHED</option>
+            </field> 
+
+                        <field name="checked_out" type="hidden" filter="unset" />
+                <field name="checked_out_time" type="hidden" filter="unset" />
+
+	</fieldset>
+
+</form>

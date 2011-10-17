@@ -10,7 +10,7 @@
 // no direct access
 defined('_JEXEC') or die;
 if($this->user->id > 0){
-
+//print_r($this->form->getValue('categories'));
 	$itemId = JRequest::getVar('id');
 	$posted = JRequest::getVar('posted');
 	if($posted == 1 && $itemId == 0){
@@ -18,8 +18,9 @@ if($this->user->id > 0){
 	}
 
 ?>
-
+	<?php if($posted == 1 && $itemId == 0){ ?>
 	<div id="header"><a href="index.php?option=com_wishli&view=list&id=<?php echo $this->item->id; ?>&Itemid=109">go to this WishLi >></a></div>
+    <?php } ?>
     <div class="edit item-page">
     
     <form action="<?php echo 'index.php?option=com_wishli&posted=1&view=form&id='.(int) $this->item->id; ?>" method="post" name="adminForm" id="adminForm" class="form-validate">
@@ -33,7 +34,12 @@ if($this->user->id > 0){
     
             <div class="formelm-area">
             <?php echo $this->form->getLabel('categories'); ?>
-            <?php echo $this->form->getInput('categories'); ?>
+            <?php //echo $this->form->getInput('categories'); ?>
+            <select id="jform_categories" name="jform[categories]">
+            <?php foreach($this->categories as $catg){ ?>
+            	<option value="<?php echo $catg->id; ?>" <?php if($this->form->getValue('categories') == $catg->id){ ?> selected="selected"<?php } ?>><?php echo $catg->title; ?></option>
+            <?php } ?>
+            </select>
             </div>
     
             <div class="formelm-area">
@@ -56,4 +62,7 @@ if($this->user->id > 0){
         </fieldset>
     </form>
     </div>
-	<?php } ?>
+<?php } else { ?>
+
+you must login to add wishli
+<?php } ?>

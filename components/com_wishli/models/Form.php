@@ -55,6 +55,33 @@ class WishliModelForm extends JModelForm
 		return $form;
 	}
 
+	function &getCategories()
+	{
+		if (!isset($this->categories))
+		{
+		//	$cache = JFactory::getCache('com_wishli', '');
+		//	$this->categories =  $cache->get($id);
+
+		//	if ($this->categories === false) {
+				
+				$db		= $this->getDbo();
+				$query	= $db->getQuery(true);
+				$query->select('a.*');
+				$query->from('#__wishli_category as a');
+				$query->where('a.state = 1');
+				
+				$db->setQuery($query);
+				if (!$db->query()) {
+					JError::raiseError(500, $db->getErrorMsg());
+				}
+
+				$this->categories = $db->loadObjectList();
+		//		$cache->store($this->categories, $id);
+		//	}
+		}
+		return $this->categories;
+	}
+
 	/**
 	 * Method to get the data that should be injected in the form.
 	 *
@@ -148,27 +175,5 @@ class WishliModelForm extends JModelForm
 
 		return $item;
 	}
-
-//	/**
-//	 * Prepare and sanitise the table prior to saving.
-//	 *
-//	 * @since	1.6
-//	 */
-//	protected function prepareTable(&$table)
-//	{
-//		jimport('joomla.filter.output');
-//
-//		if (empty($table->id)) {
-//
-//			// Set ordering to the last item if not set
-//			if (@$table->ordering === '') {
-//				$db = JFactory::getDbo();
-//				$db->setQuery('SELECT MAX(ordering) FROM #__wishli_list');
-//				$max = $db->loadResult();
-//				$table->ordering = $max+1;
-//			}
-//
-//		}
-//	}
 	
 }

@@ -15,7 +15,7 @@ jimport('joomla.application.component.view');
 /**
  * HTML View class for the Wishli component
  */
-class WishliViewList extends JView
+class WishliViewMine extends JView
 {
 	protected $state;
 	protected $list;
@@ -34,8 +34,8 @@ class WishliViewList extends JView
 		// Assign data to the view
 		$this->list    =   $this->get('List');
 		$this->gift    =   $this->get('Gift');
-		$this->buyer    =   $this->get('Buyer');
 		$this->state   =   $this->get('State');
+		$this->buyer    =   $this->get('Buyer');
 		$this->access   =   $this->get('Access');
 		// Check for errors.
 		if (count($errors = $this->get('Errors'))) 

@@ -20,18 +20,20 @@ class WishliViewForm extends JView
 	protected $form;
 	protected $item;
 	protected $state;
+	protected $categories;
 
 	// Overwriting JView display method
 	public function display($tpl = null)
 	{
 		// Initialise variables.
-		$app		= JFactory::getApplication();
-		$user		= JFactory::getUser();
+		$app		       = JFactory::getApplication();
+		$user	          = JFactory::getUser();
 		$this->user		= $user;
 		// Get model data.
-		$this->state		= $this->get('State');
+		$this->state		   = $this->get('State');
 		$this->item			= $this->get('Item');
 		$this->form			= $this->get('Form');
+		$this->categories	  = $this->get('Categories');
 
 		// Check for errors.
 		if (count($errors = $this->get('Errors'))) {
